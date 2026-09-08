@@ -1,0 +1,2 @@
+timesteps,infeasible_hours,slack_energy_kwh,mean_objective_cny,mean_operating_cost_cny,mean_terminal_gap_kwh
+2048,0,0.0,5124.515746442046,4668.956919484768,223.00646427570032

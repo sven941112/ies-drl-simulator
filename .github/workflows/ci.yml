@@ -1,0 +1,28 @@
+name: Simulation and RL smoke checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  physics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e .
+      - run: python -m unittest discover -s tests -v
+  rl-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e '.[rl]'
+      - run: python -m unittest discover -s tests -v
+      - run: python -m ies_drl.train --algo ppo --steps 2048 --out runs/ppo_smoke
+      - run: python -m ies_drl.evaluate --policy ppo --run runs/ppo_smoke --out runs/ppo_eval
+      - run: python -m ies_drl.train --algo sac --steps 1280 --out runs/sac_smoke
+      - run: python -m ies_drl.evaluate --policy sac --run runs/sac_smoke --out runs/sac_eval

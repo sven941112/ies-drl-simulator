@@ -1,0 +1,8 @@
+{
+  "timesteps": 2048,
+  "infeasible_hours": 0,
+  "slack_energy_kwh": 0.0,
+  "mean_objective_cny": 5124.515746442046,
+  "mean_operating_cost_cny": 4668.956919484768,
+  "mean_terminal_gap_kwh": 223.00646427570032
+}

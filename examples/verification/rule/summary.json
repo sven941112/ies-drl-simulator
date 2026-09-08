@@ -1,0 +1,17 @@
+{
+  "policy": "rule",
+  "seed": 42,
+  "data_sha256": "693aae006d9757aca0e65b070f350cbe4425a4d5eac02e56d40015b245cbdf2c",
+  "days": 9,
+  "mean_daily_operating_cost_cny": 4001.4761157287367,
+  "mean_daily_objective_cny": 4001.4761159307786,
+  "mean_daily_emission_kg": 3603.8896773329075,
+  "mean_daily_terminal_gap_kwh": 0.0,
+  "infeasible_hours": 0,
+  "slack_energy_kwh": 0.0,
+  "renewable_utilization": 1.0,
+  "max_balance_residual_kw": 1.0658141036401503e-13,
+  "decision_median_ms": 0.016869000319275074,
+  "decision_p95_ms": 0.042769250057972386,
+  "note": "Low cost is not a feasible result when slack is nonzero; terminal SOC is a soft target."
+}

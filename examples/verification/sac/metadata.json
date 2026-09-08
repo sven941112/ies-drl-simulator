@@ -1,0 +1,27 @@
+{
+  "algo": "sac",
+  "train_data": "data/demo/train.csv",
+  "val_data": "data/demo/val.csv",
+  "config": "configs/default.json",
+  "steps": 2048,
+  "eval_every": 2048,
+  "seed": 42,
+  "out": "runs/sac_smoke",
+  "python": "3.12.13",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "device": "cpu",
+  "torch_threads": 1,
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "torch": "2.14.0",
+    "gymnasium": "1.2.0",
+    "stable-baselines3": "2.7.0"
+  },
+  "train_sha256": "f10c343fa956858261a425c7bd3e287e759fb2d72cfe472f310fcbede0f04cbc",
+  "val_sha256": "e6b0e34c5edc2b4c8baf258e5a9e7fe09cda2fc03276bdd86968eee30733bae6",
+  "config_sha256": "f695d834d751189dd5f50e66942ce6db2d6d19ceed610622891a8b99394324d8",
+  "train_end": "2025-02-11 23:00:00",
+  "val_end": "2025-02-20 23:00:00",
+  "actual_timesteps": 2048
+}
